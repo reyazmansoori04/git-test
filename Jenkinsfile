@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('One') {
                 steps {
-                        echo 'Hi, this is Reyaz here.. trying to write the declarative pipeline '
+                        echo 'Hi, this is Reyaz and want to learn declarative pipeline'
 			
                 }
         }
@@ -33,17 +33,15 @@ pipeline {
                         stage('Integration test') {
                         agent {
                                 docker {
-                                       reuseNode false
-				image 'ubuntu'
+                                        reuseNode false
+					image 'ubuntu'
                                         }
 			}
 				steps {
 					echo 'Running the integration test..'
 				}
                                
-			}  
-		}
-}
-}
-}
+			}  }
+        }
+    }
 }
