@@ -31,12 +31,12 @@ pipeline {
                                 }
                         }
                         stage('Integration test') {
-                        agent {
-                                docker {
-                                        reuseNode false
-					image 'ubuntu'
-					label 'docker'
-                                        }
+                       agent {
+    docker {
+        dockerfile true
+        label 'docker'
+    }
+
 			}
 				
 	
